@@ -1,57 +1,65 @@
 Dado("que acesse o site Automation Practice") do
-  
-  
+  find(:xpath, '//*[@id="header"]/div[1]/div/div/a/img') #verificar cabeçalho
+  find(:xpath, '//*[@id="columns"]') #verificar carrocel 
 end
 
 Quando("Clicar na opção Woman") do
-  
+  page.execute_script('window.scrollBy(0,400)') #fazer scrollDow
+  find(:xpath, '//*[@id="block_top_menu"]/ul/li[1]/a').click
+  page.execute_script('window.scrollBy(0,450)') #fazer scrollDow
+  find(:xpath, '//*[@id="subcategories"]/ul/li[2]/div[1]/a/img').click
 end
 
 Quando("Clicar na opção Vestidos Casual Dresses") do
-end
-
-Quando("Clicar em cima de Casual Dresses") do
-  pending # Write code here that turns the phrase above into concrete actions
+  page.execute_script('window.scrollBy(0,401)') #fazer scrollDow
+  find(:xpath, '//*[@id="subcategories"]/ul/li[1]/div[1]/a/img').click
 end
 
 Quando("Clicar em Add cart") do
-  pending # Write code here that turns the phrase above into concrete actions
+  page.execute_script('window.scrollBy(0,1000)') #fazer scrollDow
+  find(:xpath, '//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img').hover #parar o mouse em cima
+  find(:xpath, '//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span').click
 end
 
 Quando("Clicar em Continue shopping") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath, '//*[@id="layer_cart"]/div[1]/div[2]/div[4]/span/span').click
 end
 
-Quando("Clicar em \(Yourlogo new experience)") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Clicar em (Yourlogo new experience)") do
+  page.execute_script('window.scrollBy(580,0)') #fazer scrollDow
+  find(:xpath, '//*[@id="header_logo"]/a/img').click
 end
 
-Quando("Clicar em t- shierts") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Clicar em t- shirts") do
+  find(:xpath, '//*[@id="block_top_menu"]/ul/li[3]/a').click
 end
 
-Quando("Clicar no cart") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Clicar em add- cart") do
+  page.execute_script('window.scrollBy(0,800)') #fazer scrollDow
+  find(:xpath, '//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img').hover
+  find(:xpath, '//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span').click
 end
 
 Quando("Clicar em proceed to checkout") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath, '//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span').click
 end
 
 Quando("Clicar yourLogo") do
-  pending # Write code here that turns the phrase above into concrete actions
+    find(:xpath, '//*[@id="header_logo"]/a/img').click
 end
 
-Quando("Para o mouse ou touchpad encima do Cart") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Para o mouse ou touchpad em cima do Cart") do
+  find(:xpath, '//*[@id="header"]/div[3]/div/div/div[3]/div/a/b').hover
 end
 
 Quando("Clicar em sign in") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath, '//*[@id="header"]/div[2]/div/div/nav/div[1]/a').click
 end
 
 Entao("abrira a pagina AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword") do
-  pending # Write code here that turns the phrase above into concrete actions
+  page.execute_script('window.scrollBy(0,500)')
+  find(:xpath, '//*[@id="login_form"]')
+  fill_in('passwd', :with => '12345')
 end
 
 Dado("que eu esteja na home logado com um usuario valido") do
@@ -130,7 +138,7 @@ Quando("clicar em cima Printed Summer Dress ${float} ,") do |float|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Quando("Clicar em add cart") do
+Quando("Clicar no add cart") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 

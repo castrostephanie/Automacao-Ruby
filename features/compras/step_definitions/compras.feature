@@ -1,6 +1,7 @@
 #language:pt
 
 #Cenario 1 
+@comprar
 Funcionalidade: Comprar 
 Eu como usuario
 Quero acessar a pagina Automation Practice
@@ -10,21 +11,20 @@ Cenario: Comprar vestido
 Dado que acesse o site Automation Practice 
 Quando Clicar na opção Woman
 E Clicar na opção Vestidos Casual Dresses
-E Clicar em cima de Casual Dresses
 E Clicar em Add cart
 E Clicar em Continue shopping
-E Clicar em (Yourlogo new experience)
-E Clicar em t- shierts
-E Clicar no cart
+E Clicar em Yourlogo new experience
+E Clicar em t- shirts
+E Clicar em add- cart
 E Clicar em proceed to checkout
 E Clicar yourLogo
-E Para o mouse ou touchpad encima do Cart
+E Para o mouse ou touchpad em cima do Cart
 E Clicar em sign in
-Então abrira a pagina (AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword
+Então abrira a pagina AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword
 
 #Cenario 2
 Cenario: Comprar mais de um vestido e gerar boleto
-Dado que eu esteja na home logado com um usuario valido
+Dado esteja na home logado com um usuario valido
 Quando Clicar em DRESSES
 E Clicar na opção  - Summer Dresses opção Printed Summer Dress
 E Clicar em Quick view
@@ -47,7 +47,7 @@ Quando Clicar em SUMMER DRESSES
 E Para como touchpath em cima do Printed Summer Dress $30.50, Clicar encima de Add card
 E clicar na  opcão Continue shopping
 E clicar em cima Printed Summer Dress $28.98 ,
-E Clicar em add cart
+E Clicar no add cart
 E Clicar em Proceed to checkout
 E Preencha o campo email address
 E Clicar ok no icone Terms of service

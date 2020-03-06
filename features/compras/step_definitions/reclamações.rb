@@ -4,15 +4,16 @@ Dado("que o usuario esteja na home") do
 end
 
 Quando("Clicar em cima contact us") do
-  click_button('@id="contact-link"]/a') #clicar
+  find(:xpath, '//*[@id="contact-link"]/a').click #clicar no link
   find(:xpath, '//*[@id="center_column"]/form') #verificar
 end
 
-Quando("Preencher todos os campos") do
-  select('webmaster', :from =>'//*[@id="id_contact"]')
-  fill_in('//*[@id="email"]', :with => 'dossantos@leonardopereira.com')
-  fill_in('//*[@id="id_order"]', :with => '5')
-  fill_in('//*[@id="message"]', :with => 'Reportando um problema')
+E("Preencher todos os campos") do
+  find(:xpath, '//*[@id="uniform-id_contact"]').click
+  find(:xpath,  '//*[@id="id_contact"]/option[3]').click
+  fill_in('from', :with => 'dossantos@leonardopereira.com')
+  fill_in('id_order', :with => '5')
+  fill_in('message', :with => 'Reportando um problema')
 end
 
 Entao("a mensagem sera enviada") do
