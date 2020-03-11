@@ -124,35 +124,38 @@ Quando("Clicar em proceed to chechout")do
   find(:xpath,'//*[@id="form"]/p/button').click
 end
 
-Quando("clicar em Pay by back wire") do
-  page.execute_script('window.scrollBy(0,450)')
+Quando("Clicar em Pay by back wire") do
   find(:xpath,'//*[@id="HOOK_PAYMENT"]/div[2]/div/p').click
 end
 
 Quando("Clicar em I confirm my order") do
-  find(:xpath,'//*[@id="center_column"]/h1')
-  page.execute_script('window.scrollBy(0,420)')
+  page.execute_script('window.scrollBy(0,600)')
   find(:xpath,'//*[@id="cart_navigation"]/button').click
 end
 
 Então("o boleto sera gerado") do
-  find(:xpath,'//*[@id="center_column"]/p[1]')
+  find(:xpath,'//*[@id="center_column"]/p[1]')#verificar
+  page.execute_script('window.scrollBy(0,500)')
 end
 
 Dado("que o usuario esteja logado e na home") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath,'//*[@id="header_logo"]/a/img')
 end
 
-Quando("Visualizar home com as seguintes opções \(WOMEN DRESSES - T-SHIRTS) e clicar na opção  DRESSES") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Visualizar home com as seguintes opções (WOMEN DRESSES - T-SHIRTS) e clicar na opção  DRESSES") do
+  find(:xpath,'//*[@id="block_top_menu"]/ul/li[1]/a')
 end
 
 Quando("Clicar em Casual dresses") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath,'//*[@id="block_top_menu"]/ul/li[1]/a').click
+  page.execute_script('window.scrollBy(0,400)')
+  find(:xpath,'//*[@id="subcategories"]/ul/li[2]/div[1]/a/img').click
+  find(:xpath,'//*[@id="categories_block_left"]/div/ul/li[1]/a').click
 end
 
 Quando("Clicar em printed DRESS") do
-  pending # Write code here that turns the phrase above into concrete actions
+  page.execute_script('window.scrollBy(0,500)')
+  find(:xpath,'//*[@id="center_column"]/ul/li[1]/div/div[1]/div/a[1]/img').click
 end
 
 Quando("Clicar emm Contact") do
