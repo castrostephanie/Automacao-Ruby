@@ -4,7 +4,7 @@
 @comprar
 Funcionalidade: Comprar 
 Eu como usuario
-Quero acessar a pagina Automation Practice
+Quero acessar a pagina Automation
 Para comprar um vestido
 
 Cenario: Comprar vestido
@@ -41,40 +41,11 @@ E Clicar em Pay by back wire
 E Clicar em I confirm my order
 Então o boleto sera gerado
 
-@comprar3
 #Cenario 3
-Cenario: Comprar dois produtos e imprimir check
-Dado que o usuario esteja logado na home 
-Quando Clicar em SUMMER DRESSES
-E Para como touchpath em cima do Printed Summer Dress $30.50, Clicar encima de Add card
-E clicar na  opcão Continue shopping
-E clicar em cima Printed Summer Dress $28.98 ,
-E Clicar no add cart
-E Clicar em Proceed to checkout
-E Preencha o campo email address
-E Clicar ok no icone Terms of service
-E Clicar em Pay by check
-E Clicar   I confirm my ordem
-E Clicar em Back to orders
-Então realizará a compra e imprimirá o check
-
-#Cenario 4
+@comprar3
 Cenario: Simular compra e ir para pagina contact
 Dado que o usuario esteja logado e na home
-Quando  Visualizar home com as seguintes opções (WOMEN DRESSES - T-SHIRTS) e clicar na opção  DRESSES 
-E Clicar em Casual dresses
-E Clicar em printed DRESS
+Quando Clicar em Casual dresses
 E Clicar em printed DRESS
 E Clicar emm Contact
 Então Abrira pagina de CUSTOMER SERVICE - CONTACT US
-
-#Cenario 5 
-Cenario: Simular compra e ir para a pagina My account
-Dado que o usuario esteja logado e na home
-Quando Visualizar home com as seguintes opções WOMEN DRESSES T-SHIRTS) e clicar na opção  DRESSES 
-E Clicar em Casual dresses
-E Clicar em printed DRESS
-E clicar na  opcão Proceed to Checkout
-E  Clicar em Contact
-E Clicar em Marcos Justo
-Então Será exbida a pagina > My account

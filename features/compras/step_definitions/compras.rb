@@ -142,46 +142,26 @@ Dado("que o usuario esteja logado e na home") do
   find(:xpath,'//*[@id="header_logo"]/a/img')
 end
 
-Quando("Visualizar home com as seguintes opções (WOMEN DRESSES - T-SHIRTS) e clicar na opção  DRESSES") do
-  find(:xpath,'//*[@id="block_top_menu"]/ul/li[1]/a')
-end
-
 Quando("Clicar em Casual dresses") do
-  find(:xpath,'//*[@id="block_top_menu"]/ul/li[1]/a').click
-  page.execute_script('window.scrollBy(0,400)')
-  find(:xpath,'//*[@id="subcategories"]/ul/li[2]/div[1]/a/img').click
-  find(:xpath,'//*[@id="categories_block_left"]/div/ul/li[1]/a').click
+  find(:xpath,'//*[@id="block_top_menu"]/ul/li[2]/a').click
+  page.execute_script('window.scrollBy(0,800)')
+  find(:xpath,'//*[@id="subcategories"]/ul/li[1]/div[1]/a/img').click
 end
 
 Quando("Clicar em printed DRESS") do
-  page.execute_script('window.scrollBy(0,500)')
-  find(:xpath,'//*[@id="center_column"]/ul/li[1]/div/div[1]/div/a[1]/img').click
+  page.execute_script('window.scrollBy(0,800)')
+  find(:xpath,'//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img').hover
+  find(:xpath,'//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[2]/span').click
 end
 
 Quando("Clicar emm Contact") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath,'//*[@id="contact-link"]/a').click
 end
 
 Então("Abrira pagina de CUSTOMER SERVICE - CONTACT US") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath,'//*[@id="center_column"]/h1')#verificar
 end
 
 Quando("Visualizar home com as seguintes opções WOMEN DRESSES T-SHIRTS e clicar na opção  DRESSES") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Quando("clicar na  opcão Proceed to Checkout") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Quando("Clicar em Contact") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Quando("Clicar em Marcos Justo") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então("Será exbida a pagina > My account") do
-  pending # Write code here that turns the phrase above into concrete actions
+  find(:xpath,'//*[@id="header_logo"]/a/img').click
 end
