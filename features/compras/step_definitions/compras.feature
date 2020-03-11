@@ -23,23 +23,25 @@ E Clicar em sign in
 Então abrira a pagina AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword
 
 #Cenario 2
+@comprar2
 Cenario: Comprar mais de um vestido e gerar boleto
-Dado esteja na home logado com um usuario valido
+Dado que esteja logado com um usuario valido
 Quando Clicar em DRESSES
-E Clicar na opção  - Summer Dresses opção Printed Summer Dress
-E Clicar em Quick view
-E Clicar no campo Quantity e digita 50
+E Clicar na opção - Summer Dresses opção Printed Summer Dress
+E Clicar em Printed Summer Dress
+E Clicar no campo Quantity e digita 5
 E Clicar em size e selecionar a opção L
 E Clicar em cima do Yellow
 E Clicar em cima da opção Add cart
 E Clicar em cima de Proceed to Chekout
 E E visualizar a pagina de sign in
 E Preencher os campos de usuario
-E clicar em Pay by back wire 
-E Clicar em I confirm my order
+E Clicar em proceed to chechout
+E Clicar em Pay by back wire 
 E Clicar em I confirm my order
 Então o boleto sera gerado
 
+@comprar3
 #Cenario 3
 Cenario: Comprar dois produtos e imprimir check
 Dado que o usuario esteja logado na home 
