@@ -6,6 +6,7 @@ require 'capybara/cucumber'
 require 'site_prism'
 require 'rest-client'
 require 'json'
+require 'httparty'
 #require 'page-object'
 #require 'data_magic'
 
