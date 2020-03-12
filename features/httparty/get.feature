@@ -1,6 +1,6 @@
 #language:pt
 
-@httparty
+@get
 Funcionalidade: buscar usuario
   Eu como sistema intermediario
   Quero fazer uma requisição de leitura de todos os usuarios
