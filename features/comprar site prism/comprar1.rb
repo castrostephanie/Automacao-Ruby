@@ -1,38 +1,60 @@
-Dado("que acesse o site Automation Practice")do  
+Dado("que acesse site Automation Practice")do  
+  set_url 'http://automationpractice.com/index.php'
+  @comprar1_page = Comprar1Page.new
+  @comprar1_page.load
+  expect(@comprar1_page).to have_yourlogo
 end
 
-Quando("Clicar na opção Woman")do  
+Quando("Clicar em Woman")do  
+  @comprar1_page.women.click
+  page_execute_script('window.scrollBy(0,400)')
+  @comprar1_page.dresses.click
 end
 
-Quando("Clicar na opção Vestidos Casual Dresses")do
+Quando("Clicar opção Vestidos Casual Dresses")do
+  page_execute_script('window.scrollBy(0,400)')
+  @comprar1_page.casualdress.click
 end
 
-Quando("Clicar em Add cart")do  
+Quando("Clicar Add cart")do 
+  @comprar1_page.addcart.click
 end
 
-Quando("Clicar em Continue shopping")do
+Quando("Clicar Continue shopping")do
+  @comprar1_page.continueshoppig.click
 end
 
-Quando("Clicar em Yourlogo new experience")do  
+Quando("Clicar Yourlogo new experience")do
+  page_execute_script('window.scrollBy(400,0)')
+  @compar1_page.yourlogo.click  
 end
 
-Quando("Clicar em t- shirts")do 
+Quando("Clicar t- shirts")do
+  @comprar1_page.tshirts.click
+  page_execute_script('window.scrollBy(0,450)')
 end
 
-Quando("Clicar em add- cart")do  
+Quando("Clicar add- cart")do 
+  @comprar1_page.addcart.click 
 end
 
-Quando("Clicar em proceed to checkout")do 
+Quando("Clicar proceed to checkout")do
+  @compar1_page.proceed.click
 end
 
-Quando("Clicar yourLogo")do  
+Quando("Clicar no yourLogo")do
+  @comprar1_page.yourlogo.click
 end
 
-Quando("Para o mouse ou touchpad em cima do Cart")do 
+Quando("Para o mouse em cima do Cart")do 
+  @comprar1_page.touchpad.hover
 end
 
-Quando("Clicar em sign in")do 
+Quando("Clicar no sign in")do
+  @comprar1_page.signibtn.click
 end
 
-Então("abrira a pagina AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword")do 
+Então("abrira pagina AUTHENTICATIONCREATE AN ACCOUNTEmail addressALREADY REGISTERED?Email addressPassword")do 
+  @comprar1_page.page
+  expect(@comprar1_page).to have_email
 end
